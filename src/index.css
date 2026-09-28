@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+/* Non-operational workshop hours (diagonal grey striping) */
+.nonop-band {
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(226, 232, 240, 0.75),
+    rgba(226, 232, 240, 0.75) 8px,
+    rgba(241, 245, 249, 0.9) 8px,
+    rgba(241, 245, 249, 0.9) 16px
+  );
+  pointer-events: none;
+}
+
+/* Overrun hatched band beyond planned_end */
+.hatch-overrun {
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(239, 68, 68, 0.2),
+    rgba(239, 68, 68, 0.2) 6px,
+    rgba(254, 226, 226, 0.5) 6px,
+    rgba(254, 226, 226, 0.5) 12px
+  );
+}
+
+/* Blinking indicators for Additional ($) and Rework (R) tags */
+@keyframes marker-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.08); }
+}
+.marker-blink {
+  animation: marker-pulse 1.8s infinite ease-in-out;
+}
+
+/* Smooth thin scrollbars for timeline and queues */
+.thin-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.thin-scroll::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+.thin-scroll::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+.thin-scroll::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

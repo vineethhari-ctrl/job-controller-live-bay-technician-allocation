@@ -1,0 +1,6 @@
+{
+  "name": "Job Controller - Live Bay & Technician Allocation",
+  "description": "Live bay schedule and technician allocation console for workshop job control, tracking chip execution, PTD deadlines, and unassigned queues.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
